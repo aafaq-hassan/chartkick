@@ -323,7 +323,7 @@
           series[i].marker = {symbol: "circle"};
         }
         options.series = series;
-        new Highcharts.Chart(options);
+        Chartkick.charts[chart.element.id] = new Highcharts.Chart(options);
       };
 
       this.renderPieChart = function (chart) {
@@ -338,7 +338,7 @@
           name: "Value",
           data: chart.data
         }];
-        new Highcharts.Chart(options);
+        Chartkick.charts[chart.element.id] = new Highcharts.Chart(options);
       };
 
       this.renderColumnChart = function (chart, chartType) {
@@ -382,7 +382,7 @@
         }
         options.series = newSeries;
 
-        new Highcharts.Chart(options);
+        Chartkick.charts[chart.element.id] = new Highcharts.Chart(options);
       };
 
       var self = this;
@@ -560,6 +560,7 @@
           resize(function () {
             chart.chart.draw(data, options);
           });
+          Chartkick.charts[chart.element.id] = chart.chart;
         });
       };
 
@@ -585,6 +586,7 @@
           resize(function () {
             chart.chart.draw(data, options);
           });
+          Chartkick.charts[chart.element.id] = chart.chart;
         });
       };
 
@@ -596,6 +598,7 @@
           resize(function () {
             chart.chart.draw(data, options);
           });
+          Chartkick.charts[chart.element.id] = chart.chart;
         });
       };
 
@@ -614,6 +617,7 @@
           resize(function () {
             chart.chart.draw(data, options);
           });
+          Chartkick.charts[chart.element.id] = chart.chart;
         });
       };
 
@@ -630,6 +634,7 @@
           resize(function () {
             chart.chart.draw(data, options);
           });
+          Chartkick.charts[chart.element.id] = chart.chart;
         });
       };
 
@@ -652,6 +657,7 @@
           resize(function () {
             chart.chart.draw(data, options);
           });
+          Chartkick.charts[chart.element.id] = chart.chart;
         });
       };
 
@@ -677,6 +683,7 @@
           resize(function () {
             chart.chart.draw(data, options);
           });
+          Chartkick.charts[chart.element.id] = chart.chart;
         });
       };
     };
